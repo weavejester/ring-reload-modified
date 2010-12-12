@@ -1,13 +1,11 @@
-# ring-reload-modified
+# reload-modified middleware
 
-FIXME: write description
+The reload-modified middleware automatically reloads namespaces when
+their associated source files are modified.
 
-## Usage
+## Example
 
-FIXME: write
-
-## License
-
-Copyright (C) 2010 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
+    (use 'ring.middleware.reload-modified)
+    
+    (def app
+      (wrap-reload-modified #'handler ["src"]))
