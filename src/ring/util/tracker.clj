@@ -2,8 +2,8 @@
   "Keeping track of which namespaces have changed and need to be reloaded"
   (:use [ring.util.dependency :only (graph depend dependents remove-key)]
 	[ring.util.nsdeps :only (deps-from-ns-decl)]
-	[clojure.contrib.find-namespaces :only (find-clojure-sources-in-dir
-						read-file-ns-decl)]
+	[clojure.tools.namespace :only (find-clojure-sources-in-dir
+                                        read-file-ns-decl)]
 	[clojure.set :only (union)]))
 
 (defn- find-sources
