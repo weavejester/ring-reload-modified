@@ -1,17 +1,8 @@
 # reload-modified middleware
 
-The reload-modified middleware automatically reloads namespaces when
-their associated source files are modified.
+## This library is deprecated.
 
-## Installation
+The functionality of this library has been rolled into [Ring][1] as
+the `ring.middleware.reload/wrap-reload` function.
 
-Add the following dependency to your `project.clj` file:
-
-    [ring-reload-modified "0.1.1"]
-
-## Example
-
-    (use 'ring.middleware.reload-modified)
-    
-    (def app
-      (wrap-reload-modified #'handler ["src"]))
+[1]: https://github.com/ring-clojure/ring
